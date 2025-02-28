@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 546.92 882.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2.67px;
+      }
+    </style>
+  </defs>
+  <g id="svg2">
+    <path id="path1873" class="cls-1" d="M545.59,881.46c-300.31,0-543.75-243.53-543.75-543.94"/>
+    <path id="path1875" class="cls-1" d="M337.9,1.33C152.3,1.33,1.83,151.85,1.83,337.52"/>
+    <path id="path2762" class="cls-1" d="M545.59,209.09c0-114.74-92.98-207.76-207.68-207.76"/>
+    <path id="path2764" class="cls-1" d="M417.2,337.52c70.91,0,128.39-57.5,128.39-128.43"/>
+    <path id="path2766" class="cls-1" d="M417.2,337.52c-43.79,0-79.3-35.51-79.3-79.32"/>
+    <path id="path2768" class="cls-1" d="M386.99,209.09c-27.11,0-49.09,21.99-49.09,49.11h0"/>
+    <path id="path2770" class="cls-1" d="M386.99,209.09c16.68,0,30.21,13.53,30.21,30.22h0"/>
+    <path id="path2772" class="cls-1" d="M398.32,258.2c10.43,0,18.88-8.46,18.88-18.89h0"/>
+    <path id="path2774" class="cls-1" d="M398.32,258.2c-6.26,0-11.33-5.07-11.33-11.33h0"/>
+    <path id="rect2784" class="cls-1" d="M398.32,246.86h-11.33"/>
+    <path id="rect2786" class="cls-1" d="M398.32,239.31v18.89"/>
+    <path id="rect2788" class="cls-1" d="M394.54,246.86v-7.55"/>
+    <path id="rect2790" class="cls-1" d="M394.54,243.09h3.78"/>
+    <path id="rect2794" class="cls-1" d="M386.99,239.31h30.21"/>
+    <path id="rect2796" class="cls-1" d="M386.99,258.2v-49.11"/>
+    <path id="rect2798" class="cls-1" d="M417.2,258.2h-79.3"/>
+    <path id="rect2800" class="cls-1" d="M417.2,209.09v128.43"/>
+    <path id="rect2802" class="cls-1" d="M337.9,209.09h207.68"/>
+    <path id="rect2804" class="cls-1" d="M337.71,337.52V1.14"/>
+    <path id="rect2806" class="cls-1" d="M545.59,337.52H1.83"/>
+    <path id="path922" class="cls-1" d="M545.59,881.46H1.33"/>
+    <path id="path924" class="cls-1" d="M545.09,1.33H1.33"/>
+    <path id="path926" class="cls-1" d="M1.33,881.46V.83"/>
+    <path id="path928" class="cls-1" d="M545.59,881.46V.83"/>
+    <path id="path1028" class="cls-1" d="M394.54,239.31c-4.17,0-7.55,3.38-7.55,7.55"/>
+    <path id="path1030" class="cls-1" d="M394.54,239.31c2.09,0,3.78,1.69,3.78,3.78"/>
+    <path id="path1034" class="cls-1" d="M394.54,246.86c2.09,0,3.78-1.69,3.78-3.78h0"/>
+  </g>
+</svg>
