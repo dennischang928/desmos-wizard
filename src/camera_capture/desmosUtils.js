@@ -43,7 +43,7 @@ export function displayDesmos(expressions) {
               };
               document.body.appendChild(script);
             })();
-          <\/script>
+          </script>
         </body>
       </html>
     `);
