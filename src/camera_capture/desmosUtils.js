@@ -9,7 +9,6 @@ export function displayDesmos(expressions) {
   setTimeout(() => {
     document.open();
     document.write(`
-      
       <!DOCTYPE html>
       <html>
         <head>
@@ -31,7 +30,7 @@ export function displayDesmos(expressions) {
                 var mathCoordinates = calculator.graphpaperBounds.mathCoordinates;
                 var pixelsPerUnitY = pixelCoordinates.height / mathCoordinates.height;
                 var pixelsPerUnitX = pixelCoordinates.width / mathCoordinates.width;
-                calculator.setMathBounds({ left:  -640 *(pixelsPerUnitY / pixelsPerUnitX) , right: 0, bottom:-480, top: 0 });                // calculator.resize();
+                calculator.setMathBounds({ left:  -640 , right: 0, bottom:-500, top: 0 });                // calculator.resize();
                 var exprs = ${bezierJSON};
                 if (Array.isArray(exprs)) {
                   exprs.forEach(function(expr, index) {

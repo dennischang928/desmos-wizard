@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./camera_capture.css";
-import { Button, CircularProgress } from "@mui/material";
+import { Button, CircularProgress, FormControlLabel, Switch } from "@mui/material";
 
 // Add missing imports:
 import { processBackgroundRemoval } from "../utils/bgRemoval";
@@ -21,6 +21,7 @@ const CameraCapture = () => {
   const [processedImage, setProcessedImage] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [BezierCurves, setBezierCurves] = useState(null);
+  const [useBackgroundRemoval, setUseBackgroundRemoval] = useState(false);
 
   /* ---------- Camera Stream Management ---------- */
   useEffect(() => {
@@ -46,19 +47,30 @@ const CameraCapture = () => {
   /* ---------- Process Captured Image ---------- */
   const processImage = () => {
     setIsProcessing(true);
-    // processCapturedImage returns a promise with {bgUrl, result}
-    processCapturedImage(canvasRef, processBackgroundRemoval, processBezier)
-      .then(({ bgUrl, result }) => {
-        setProcessedImage(bgUrl);
+    const canvas = canvasRef.current;
+    canvas.toBlob(async (blob) => {
+      try {
+        if (useBackgroundRemoval) {
+          // Process with background removal
+          const url = await processBackgroundRemoval(blob);
+          setProcessedImage(url);
+          const res = await fetch(url);
+          const bgRemovedBlob = await res.blob();
+          const response = await processBezier(bgRemovedBlob);
+          setBezierCurves(response.result);
+        } else {
+          // Process original image directly
+          setProcessedImage(URL.createObjectURL(blob));
+          const response = await processBezier(blob);
+          setBezierCurves(response.result);
+        }
         setIsProcessing(false);
         setCaptured(false);
-        // Save extracted Bézier curves to state
-        setBezierCurves(result);
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error(error);
         setIsProcessing(false);
-      });
+      }
+    }, "image/png");
   };
 
   /* ---------- Display Desmos Graph When Bézier Data is Ready ---------- */
@@ -158,6 +170,15 @@ const CameraCapture = () => {
           marginTop: "1em"
         }}
       >
+        <FormControlLabel
+          control={
+            <Switch
+              checked={useBackgroundRemoval}
+              onChange={(e) => setUseBackgroundRemoval(e.target.checked)}
+            />
+          }
+          label="Remove Background"
+        />
         {(isCameraOpen || captured) && (
           <Button onClick={handleCaptureClick}>
             {captured ? "Resume" : "Capture"}
