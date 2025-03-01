@@ -8,7 +8,6 @@ import { processBezier } from "../utils/bezierProcessor";
 
 // Import the helper functions from our new modules
 import { startCamera, stopCamera, captureFrame } from "./captureUtils";
-import { processCapturedImage } from "./imageProcessor";
 import { displayDesmos } from "./desmosUtils";
 
 const CameraCapture = () => {
