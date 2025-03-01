@@ -9,6 +9,7 @@ export function displayDesmos(expressions) {
   setTimeout(() => {
     document.open();
     document.write(`
+      
       <!DOCTYPE html>
       <html>
         <head>
